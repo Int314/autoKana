@@ -12,21 +12,21 @@
 </head>
 
 <body>
-  <main class="container text-center">
+  <main class="container">
     <h1 class="m-5">ローマ字→ひらがな・カタカナ変換</h1>
-    <div class="row row-cols-autos">
-      <div class="col">
-        <label for="romajiInput">入力：</label>
-        <input type="text" id="romajiInput" />
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="romajiInput">入力</label>
+        <input type="text" id="romajiInput" class="form-control" />
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <div class="mb-2">
-          <label for="hiraganaOutput">ひらがな：</label>
-          <input type="text" id="hiraganaOutput" readonly />
+          <label for="hiraganaOutput">ひらがな</label>
+          <input type="text" id="hiraganaOutput" class="form-control" readonly />
         </div>
         <div>
-          <label for="katakanaOutput">カタカナ：</label>
-          <input type="text" id="katakanaOutput" readonly />
+          <label for="katakanaOutput">カタカナ</label>
+          <input type="text" id="katakanaOutput" class="form-control" readonly />
         </div>
       </div>
     </div>

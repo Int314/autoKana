@@ -61,7 +61,8 @@ import { katakanaMap } from './katakanaMap.js';
       // 「nn」を処理して「ん」を出力しリセット
       // 小さな「っ」と区別するため
       if (inputChar === 'n' && previousChar === 'n') {
-        $(furigana).val($(furigana).val() + 'ん');
+        const convChar = options.katakana ? 'ン' : 'ん';
+        $(furigana).val($(furigana).val() + convChar);
         accumulatedInput = '';
         previousChar = '';
         return;
@@ -69,7 +70,8 @@ import { katakanaMap } from './katakanaMap.js';
 
       // 同じアルファベットが連続した場合、小さな「っ」を追加
       if (inputChar === previousChar) {
-        $(furigana).val($(furigana).val() + 'っ');
+        const convChar = options.katakana ? 'ッ' : 'っ';
+        $(furigana).val($(furigana).val() + convChar);
         accumulatedInput = inputChar; // リセットして現在の文字を追加
       } else {
         accumulatedInput += inputChar;
